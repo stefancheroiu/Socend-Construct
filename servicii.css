@@ -1,0 +1,152 @@
+body {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Cdefs%3E%3ClinearGradient id='a' x1='0' x2='0' y1='1' y2='0' gradientTransform='rotate(0,0.5,0.5)'%3E%3Cstop offset='0' stop-color='%23047B16'/%3E%3Cstop offset='1' stop-color='%23CF6'/%3E%3C/linearGradient%3E%3ClinearGradient id='b' x1='0' x2='0' y1='0' y2='1'%3E%3Cstop offset='0' stop-color='%233DFF3C'/%3E%3Cstop offset='1' stop-color='%23B8FFB0'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cg fill='%23FFF' fill-opacity='0' stroke-miterlimit='10'%3E%3Cg stroke='url(%23a)' stroke-width='4.949999999999999'%3E%3Cpath transform='translate(-119.35 6) rotate(-1.9499999999999993 1409 581) scale(0.932958)' d='M1409 581 1450.35 511 1490 581z'/%3E%3Ccircle stroke-width='1.6500000000000001' transform='translate(-148 91) rotate(8.3 800 450) scale(1.0074869999999998)' cx='500' cy='100' r='40'/%3E%3Cpath transform='translate(21.1 -102) rotate(64 401 736) scale(1.0074869999999998)' d='M400.86 735.5h-83.73c0-23.12 18.74-41.87 41.87-41.87S400.86 712.38 400.86 735.5z'/%3E%3C/g%3E%3Cg stroke='url(%23b)' stroke-width='1.5'%3E%3Cpath transform='translate(546 1.6000000000000014) rotate(-0.40000000000000036 150 345) scale(0.982986)' d='M149.8 345.2 118.4 389.8 149.8 434.4 181.2 389.8z'/%3E%3Crect stroke-width='3.3000000000000003' transform='translate(-155 -246.5) rotate(54 1089 759)' x='1039' y='709' width='100' height='100'/%3E%3Cpath transform='translate(-333.2 90.8) rotate(9 1400 132) scale(0.81)' d='M1426.8 132.4 1405.7 168.8 1363.7 168.8 1342.7 132.4 1363.7 96 1405.7 96z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  background-attachment: fixed;
+  background-size: cover;
+}
+.services-content {
+  height: 100%;
+  overflow: hidden;
+}
+
+.services-content .containerservices {
+  margin: 0 3rem;
+  padding-top: 10rem;
+}
+
+.services-title {
+  font-size: 1.5rem;
+  color: #fff;
+  margin-bottom: 2.3rem;
+  background-color: #5ab032;
+  display: inline-block;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+  border-radius: 1rem;
+  padding: 0.7rem;
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+}
+.services-title.in-view-eight {
+  opacity: 1;
+}
+.services-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.service-item1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+.service-item1:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 1.5rem;
+  background-color: #c8fdaf;
+}
+.service-item1.construction {
+  transform: translateX(-150%);
+  transition: transform 1s ease-out;
+}
+.service-item1.construction.in-view-three {
+  transform: translateX(0);
+}
+.service-item1.telecom {
+  transform: translateX(150%);
+  transition: transform 1s ease-out;
+}
+.service-item1.telecom.in-view-four {
+  transform: translateX(0);
+}
+.service-item1.design {
+  transform: translateX(-150%);
+  transition: transform 1s ease-out;
+}
+.service-item1.design.in-view-five {
+  transform: translateX(0);
+}
+.service-item1.consultancy {
+  transform: translateX(150%);
+  transition: transform 1s ease-out;
+}
+.service-item1.consultancy.in-view-six {
+  transform: translateX(0);
+}
+.service-item1 img {
+  margin-bottom: 20px;
+  width: 100%;
+  height: 10rem;
+}
+
+.service-item1 h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #fff;
+  text-align: center;
+}
+
+.service-item1 .paragrafservice {
+  line-height: auto;
+  color: #fff;
+  padding: 2rem;
+  background-color: #5ab032;
+  border-radius: 1rem;
+  transition: all 0.3s ease;
+}
+.imageservice {
+  background-color: #b3b2b2;
+  border-radius: 1rem;
+  transition: all 0.3s ease;
+  padding: 2rem;
+}
+.service-item1 div:nth-child(1) {
+  flex-basis: 30%;
+}
+.service-item1 div:nth-child(2) {
+  flex-basis: 70%;
+}
+.service-item1.telecom div:nth-child(1) {
+  flex-basis: 70%;
+}
+.service-item1.telecom div:nth-child(2) {
+  flex-basis: 30%;
+}
+.service-item1.consultancy div:nth-child(1) {
+  flex-basis: 70%;
+}
+.service-item1.consultancy div:nth-child(2) {
+  flex-basis: 30%;
+}
+
+.more-services {
+  color: #000;
+  text-align: center;
+  margin-top: 6rem;
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+}
+.more-services.in-view-seven {
+  opacity: 1;
+}
+.more-services .container {
+  margin: 0 auto;
+  padding: 8rem 0;
+}
+
+.more-services h2 {
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+
+.more-services p {
+  font-size: 18px;
+  line-height: 1.6;
+}

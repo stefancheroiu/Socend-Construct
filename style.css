@@ -1,0 +1,512 @@
+html {
+  font-size: 20px;
+}
+/* NAVIGATION */
+
+.navbar-nav.text-center > a {
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: "Source Code Pro", monospace;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+.navbar.navbar-expand-lg {
+  padding: 0 6rem;
+  position: fixed;
+  width: 100%;
+  background-color: #020c15;
+  z-index: 2;
+}
+.container-fluid {
+  background-color: #020c15;
+}
+.logo {
+  height: 4rem;
+  width: 10rem;
+}
+.hamburger {
+  cursor: pointer;
+}
+.hamburger input {
+  display: none;
+}
+.hamburger svg {
+  height: 2rem;
+  transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.line {
+  fill: none;
+  stroke: white;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 3;
+  transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+    stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.line-top-bottom {
+  stroke-dasharray: 12 63;
+}
+.hamburger input:checked + svg {
+  transform: rotate(-45deg);
+}
+.hamburger input:checked + svg .line-top-bottom {
+  stroke-dasharray: 20 300;
+  stroke-dashoffset: -32.42;
+}
+
+/* NAVIGATION */
+
+/* HERO*/
+.hero {
+  overflow: hidden;
+  height: 100vh;
+}
+video {
+  width: 100%;
+  height: 100vh;
+  opacity: 0.8;
+  object-fit: cover;
+}
+
+/* HERsO*/
+
+/* ABOUT US */
+.about-us {
+  padding: 80px 0;
+  text-align: center;
+}
+
+.about-us h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  opacity: 0;
+  transition: opacity 3s ease;
+}
+
+/* Adaugă o clasă pentru animație */
+.titluabout.in-view {
+  opacity: 1;
+}
+
+.about-items {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.about-item {
+  flex: 0 0 calc(50% - 40px);
+  margin: 20px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  opacity: 0;
+  transition: opacity 3s ease;
+}
+.about-item.in-view {
+  opacity: 1;
+}
+.about-item:nth-child(1),
+.about-item:nth-child(4) {
+  background-color: #5ab032;
+  color: white;
+}
+.about-item:nth-child(1) p,
+.about-item:nth-child(4) p {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+.about-item:nth-child(1) h3,
+.about-item:nth-child(4) h3 {
+  font-family: "Inria Sans", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+.about-item:nth-child(2) p,
+.about-item:nth-child(3) p {
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+.about-item:nth-child(2) h3,
+.about-item:nth-child(3) h3 {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+.about-item:hover {
+  transform: translateY(-10px);
+}
+
+.about-item img {
+  width: 20rem;
+  height: 16rem;
+  border-radius: 8px;
+}
+
+.about-item h3 {
+  font-size: 24px;
+  margin-top: 20px;
+}
+
+.about-item p {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+/* ABOUT US */
+
+/* INDUSTRIAL CONSTRUCTION */
+.industrialconstruction {
+  overflow: hidden;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(111, 240, 52, 0.4);
+}
+.overlaycontainer {
+  position: relative;
+  display: inline-block;
+}
+.overlaycontainer img {
+  height: 100vh;
+  width: 100vw;
+}
+.textindustrial {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  gap: 2rem;
+  padding-left: 3rem;
+  max-width: 50%;
+  backdrop-filter: blur(1.2rem) saturate(100%);
+  border-radius: 1.5rem;
+  transform: translateX(-130%);
+  transition: transform 2s ease-in-out;
+}
+.textindustrial.in-view-nine {
+  transform: translateX(0);
+}
+.textindustrial h3 {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: italic;
+  font-size: 3rem;
+}
+.textindustrial p {
+  font-family: "Exo 2", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: italic;
+  font-size: 1.3rem;
+}
+.pageindustrial {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translate(-10%, -50%);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 3rem;
+  color: #fff;
+  flex-shrink: 2;
+}
+.pageindustrial i {
+  font-size: 3rem;
+  padding-bottom: 1rem;
+}
+.pageindustrial h5 {
+  padding-bottom: 1rem;
+}
+.buttonindustrial {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  position: relative;
+  padding: 1rem 3.5rem;
+  font-size: 18px;
+  text-transform: uppercase;
+  border: 0;
+  box-shadow: #fff 0px 7px 0px 0px;
+  background-color: #5ab032;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: 31ms cubic-bezier(0.5, 0.7, 0.4, 1);
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.buttonindustrial:before {
+  content: attr(alt);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  inset: 1;
+  font-size: 0.7rem;
+  font-weight: bold;
+  color: white;
+  letter-spacing: 4px;
+  opacity: 1;
+}
+
+.buttonindustrial:active {
+  box-shadow: none;
+  transform: translateY(7px);
+  transition: 35ms cubic-bezier(0.5, 0.7, 0.4, 1);
+}
+
+.buttonindustrial:hover:before {
+  transition: all 0s;
+  transform: translateY(100%);
+  opacity: 0;
+}
+
+.buttonindustrial i {
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  letter-spacing: 4px;
+  font-style: normal;
+  transition: all 2s ease;
+  transform: translateY(-20px);
+  opacity: 0;
+}
+
+.buttonindustrial:hover i {
+  transition: all 0.2s ease;
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+.buttonindustrial:hover i:nth-child(1) {
+  transition-delay: 0.045s;
+}
+
+.buttonindustrial:hover i:nth-child(2) {
+  transition-delay: calc(0.045s * 3);
+}
+
+.buttonindustrial:hover i:nth-child(3) {
+  transition-delay: calc(0.045s * 4);
+}
+
+.buttonindustrial:hover i:nth-child(4) {
+  transition-delay: calc(0.045s * 5);
+}
+
+.buttonindustrial:hover i:nth-child(6) {
+  transition-delay: calc(0.045s * 6);
+}
+
+.buttonindustrial:hover i:nth-child(7) {
+  transition-delay: calc(0.045s * 7);
+}
+
+.buttonindustrial:hover i:nth-child(8) {
+  transition-delay: calc(0.045s * 8);
+}
+
+.buttonindustrial:hover i:nth-child(9) {
+  transition-delay: calc(0.045s * 9);
+}
+
+.buttonindustrial:hover i:nth-child(10) {
+  transition-delay: calc(0.045s * 10);
+}
+
+.contactindustrial {
+  backdrop-filter: blur(1.2rem) saturate(100%);
+  padding: 2rem;
+  text-align: center;
+  border-radius: 1.5rem;
+  transform: translateX(300%);
+  transition: transform 2s ease-in-out;
+}
+.contactindustrial.in-view-ten {
+  transform: translateX(0);
+}
+.contactindustrial h5,
+.deceindustrial h5 {
+  font-family: "Exo 2", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 1.3rem;
+}
+.deceindustrial {
+  backdrop-filter: blur(1.2rem) saturate(100%);
+  padding: 2rem;
+  text-align: center;
+  border-radius: 1.5rem;
+  transform: translateX(150%);
+  transition: transform 2s ease-in-out;
+}
+.deceindustrial.in-view-ten {
+  transform: translateX(0);
+}
+/* INDUSTRIAL CONSTRUCTION */
+
+/* SERVICES */
+.services {
+  padding: 80px 0;
+  text-align: center;
+  overflow: hidden;
+}
+
+.services h5 {
+  margin-bottom: 40px;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  opacity: 0;
+  transition: opacity 3s ease;
+}
+.services h5.in-view {
+  opacity: 1;
+}
+.service-item {
+  display: inline-block;
+  width: calc(50% - 40px);
+  margin: 20px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out;
+}
+.service-item.one {
+  transform: translateX(-200%);
+  transition: transform 1.5s ease-in-out;
+}
+.service-item.two {
+  transform: translateX(200%);
+  transition: transform 1.5s ease-in-out;
+}
+.service-item.one.in-view-one {
+  transform: translateX(0);
+}
+.service-item.two.in-view-two {
+  transform: translateX(0);
+}
+.service-item:hover {
+  transform: translateY(-10px);
+}
+
+.service-item img {
+  width: 18rem;
+  height: 13rem;
+}
+
+.service-item h3 {
+  font-size: 24px;
+  margin-top: 20px;
+  font-family: "Inria Sans", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.service-item p {
+  font-size: 18px;
+  margin-top: 10px;
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+/* SERVICES */
+
+/* FOOTER */
+.footer {
+  background-color: #020c15;
+  color: white;
+  padding: 50px 0;
+}
+
+.footer .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.footer-content {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: start;
+}
+
+.footer-contact {
+  padding-left: 4rem;
+}
+.footer-content > img {
+  height: 5rem;
+  width: 10rem;
+}
+.footer h4 {
+  margin-bottom: 20px;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.footer-content a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  transition: color 0.5s;
+  margin-bottom: 5px;
+  font-family: "Source Code Pro", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.8rem;
+}
+
+.footer-links a:hover {
+  color: #5ab032;
+}
+.contact-info > p:nth-child(1) {
+  text-align: start;
+}
+.footer-contact .contact-info a {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  font-family: "Source Code Pro", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.8rem;
+}
+.footer-contact .contact-info a:hover {
+  text-decoration: underline;
+  color: #5ab032;
+  transition: all 0.5s;
+}
+.fa-solid.fa-location-dot,
+.fas.fa-phone,
+.fas.fa-envelope {
+  margin-right: 10px;
+  width: 20px;
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+/* FOOTER */
